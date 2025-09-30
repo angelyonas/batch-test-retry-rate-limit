@@ -24,11 +24,25 @@ npm install
 Create a `.env` file with the following variables:
 
 ```env
+# Server Configuration
 PORT=3000
-RATE_LIMIT_WINDOW_MS=900000
-RATE_LIMIT_MAX_REQUESTS=100
-RETRY_ATTEMPTS=3
-RETRY_DELAY=1000
+NODE_ENV=development
+LOG_LEVEL=info
+
+# API Configuration
+API_BASE_URL=https://your-api-domain.com/api
+VTEX_APP_KEY=your-vtex-app-key
+VTEX_APP_TOKEN=your-vtex-app-token
+
+# Rate Limit Test Configuration
+TEST_RATE_LIMIT_URL=/your/test/endpoint
+TEST_RATE_LIMIT_LOOPS=500
+TEST_RATE_LIMIT_REQUESTS_PER_INTERVAL=50
+TEST_RATE_LIMIT_INTERVAL=2000
+
+# Logging Configuration
+LOG_DIR=logs
+
 ```
 
 ## Usage
